@@ -6,6 +6,12 @@
 
 - Or, to try it out as part of Scratch 3.0, visit [https://scratch.mit.edu/create](https://scratch.mit.edu/create) and click on the "Costumes" tab.
 
+### Prerequisites
+
+This package depends on Paper.js, so it depends indirectly on several native packages. Depending on your system
+configuration, you may or may not need to install them. If you see errors about `pixman`, `cairo`, etc., check here:
+<https://github.com/scratchfoundation/paper.js/#installing-native-dependencies>
+
 ### Installation
 It will be easiest if you develop on Mac or Linux. If you are using Windows, I recommend using Ubuntu on Windows, which will allow you to use Linux commands on Windows. You will need administrator permissions.
 
@@ -25,7 +31,7 @@ For Ubuntu on Windows, the Windows install of nodejs may interfere with the Linu
 - PATH="/usr/bin:$PATH"
 ```
 
-If you want to edit scratch-paint, or help contribute to our open-source project, fork the [scratch-paint repo](https://github.com/LLK/scratch-paint). Then:
+If you want to edit scratch-paint, or help contribute to our open-source project, fork the [scratch-paint repo](https://github.com/scratchfoundation/scratch-paint). Then:
 ```bash
 git clone https://github.com/<YOUR_GITHUB_USERNAME>/scratch-paint.git
 cd scratch-paint
@@ -50,7 +56,7 @@ So you've tried out your edits in the playground and they look good. You should 
 
 Get the rest of Scratch:
 ```bash
-git clone https://github.com/LLK/scratch-gui.git
+git clone https://github.com/scratchfoundation/scratch-gui.git
 ```
 Go to your `scratch-paint` folder and run:
 ```bash
@@ -118,7 +124,7 @@ combineReducers({
 ```
 Note that scratch-paint expects its state to be in `state.scratchPaint`, so the name must be exact.
 
-Scratch-paint shares state with its parent component because it expects to share the parent's `IntlProvider`, which inserts translations into the state. See the `IntlProvider` setup in `scratch-gui` [here](https://github.com/LLK/scratch-gui/blob/f017ed72201bf63334dced161441ef6f154b1c74/src/lib/app-state-hoc.jsx).
+Scratch-paint shares state with its parent component because it expects to share the parent's `IntlProvider`, which inserts translations into the state. See the `IntlProvider` setup in `scratch-gui` [here](https://github.com/scratchfoundation/scratch-gui/blob/f017ed72201bf63334dced161441ef6f154b1c74/src/lib/app-state-hoc.jsx).
 
 ### Code organization
 We use React and Redux. If you're just getting started with them, here are some good tutorials:
